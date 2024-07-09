@@ -2,15 +2,15 @@ package com.ridhaaf.userapidemo.service;
 
 import com.ridhaaf.userapidemo.model.User;
 import com.ridhaaf.userapidemo.repository.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
+@AllArgsConstructor
 public class UserService {
-    @Autowired
     private UserRepository userRepository;
 
     public List<User> getAllUsers() {
