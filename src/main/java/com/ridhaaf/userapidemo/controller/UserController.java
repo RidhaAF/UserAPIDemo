@@ -32,7 +32,7 @@ public class UserController {
         return userService.createUser(user);
     }
 
-    @PostMapping("/{id}")
+    @PutMapping("/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User updatedUser) {
         return userService.getUserById(id)
                 .map(user -> {
